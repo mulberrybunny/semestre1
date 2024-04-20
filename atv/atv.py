@@ -1,12 +1,12 @@
 for i in range(1, 51):
     print(i)
 
--ex 2
+#ex 2
 
 for i in range(2, 101, 2):
     print(i)
 
-Ex 3
+#Ex 3
 
 valor = int(input("Digite um valor entre 1 e 10: "))
 if 1 <= valor <= 10:
@@ -15,7 +15,7 @@ if 1 <= valor <= 10:
 else:
     print("Valor fora do interval")
 
-Ex 4
+#Ex 4
 
 soma_idades = 0
 quantidade = 0
@@ -30,9 +30,9 @@ if quantidade != 0:
     media = soma_idades / quantidade
     print(f"A média das idades é: {media}")
 else:
-    print(f”n\a")
+    print(f"\nInvalido")
 
-Ex 5
+#Ex 5
 
 pares = impares = 0
 for _ in range(10):
@@ -44,7 +44,7 @@ for _ in range(10):
 print(f"Quantidade de números pares: {pares}")
 print(f"Quantidade de números ímpares: {impares}")
 
-Ex 6
+#Ex 6
 
 intervalo = fora_intervalo = 0
 for _ in range(10):
@@ -57,7 +57,7 @@ print(f"Números no intervalo [10, 20]: {intervalo}")
 print(f"Números fora do intervalo: {fora_intervalo}")
 
 
-Ex 7
+#Ex 7
 
 soma_pares = 0
 contador = 0
@@ -69,7 +69,7 @@ for i in range(2, 101, 2):
 print(f"Soma dos 50 primeiros números pares: {soma_pares}")
 
 
-Ex 8
+#Ex 8
 
 numero = int(input("Digite um número positivo: "))
 print("Divisores:")
@@ -77,7 +77,7 @@ for i in range(1, numero + 1):
     if numero % i == 0:
         print(i)
 
-Ex 9
+#Ex 9
 
 numeros = []
 for _ in range(10):
@@ -86,7 +86,7 @@ for _ in range(10):
 numeros.sort()
 print("Números em ordem crescente:", numeros)
 
-Ex 10
+#Ex 10
 
 lista = [2, 4, 7, 2, 3, 3, 1, 0, 2, 6]
 repetidos = set()
