@@ -37,9 +37,9 @@ while True:
             print("Você não encontrou nenhum Pokémon na caverna desta vez.")
     elif escolha == "matagal":
         print("Você entrou no matagal...")
-        pokemon = random.choice(pokemons) if random.randint(1, 10) == 1 else None
+        pokemon_data = random.choice(list(zip(pokemons, pokeimg))) if random.randint(1, 3) >= 1 else (None, None)
         if pokemon:
-            print(f"Você encontrou um {pokemon} no matagal!")
+            print(f"Você encontrou um {pokemon} no matagal!\n{pokemon_img}")
         else:
             print("Você não encontrou nenhum Pokémon no matagal desta vez.")
     elif escolha == "sair":
