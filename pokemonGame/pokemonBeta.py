@@ -120,7 +120,7 @@ while True:
     escolha = input("\nOnde você gostaria de explorar? (caverna/matagal/sair) ").lower()
     if escolha == "caverna":
         print("Você entrou na caverna...")
-        pokemon_dataCa = random.choice(list(zip(pokemonsCa, pokeimgCa))) if random.randint(1, 3) >= 1 else (None, None)
+        pokemon_dataCa = random.choice(list(zip(pokemonsCa, pokeimgCa))) if random.randint(1, 3) == 1 else (None, None)
         pokemon, pokemon_img = pokemon_dataCa
         if pokemon:
             print(f"Você encontrou um {pokemon} na caverna!\n{pokemon_img}")
@@ -128,7 +128,7 @@ while True:
             print("Você não encontrou nenhum Pokémon na caverna desta vez.")
     elif escolha == "matagal":
         print("Você entrou no matagal...")
-        pokemon_dataMa = random.choice(list(zip(pokemonsMa, pokeimgMa))) if random.randint(1, 3) >= 1 else (None, None)
+        pokemon_dataMa = random.choice(list(zip(pokemonsMa, pokeimgMa))) if random.randint(1, 3) == 1 else (None, None)
         pokemon, pokemon_img = pokemon_dataMa
         if pokemon:
             print(f"Você encontrou um {pokemon} no matagal!\n{pokemon_img}")
