@@ -125,7 +125,7 @@ while True:
         pokemon_dataCa = random.choice(list(zip(pokemonsCa, pokeimgCa))) 
         pokemon, pokemon_img = pokemon_dataCa
         if random.randint(1, 2) == 1:
-            print(f"você tem {tentativas_extra} tentativas para capturar o pokemon.")
+            print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
             print(f"Você encontrou um {pokemon} no caverna!\n{pokemon_img}") 
             if pokemon in Pokemons_Pokedex :
                 print("Você já tem esse Pokemón.") 
@@ -138,21 +138,23 @@ while True:
                             if random.random() <= probabilidade_captura:
                                 print(f"Parabéns! Você capturou o {pokemon}!")
                                 Pokemons_Pokedex.append(pokemon)
-                                tentativas_extra -= 1
-                            else:
-                                
+                                print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
+                            else:   
                                 print(f"Oops! Você não conseguiu capturar o {pokemon} :( .")
                                 tentativas_extra -= 1
+                                print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
                                 tentar_novamente = input("Você deseja tentar capturar novamente? (sim/não)\n").lower()
                                 if tentar_novamente == "sim" or pokemon not in Pokemons_Pokedex and tentativas_extra > 1:
                                     probabilidade_captura = 0.35  # Probabilidade de captura na caverna
                                     if random.random() <= probabilidade_captura and pokemon not in Pokemons_Pokedex:
                                         print(f"Parabéns! Você conseguiu capturar o {pokemon}! Ele foi adicionado a sua pokedex!")
                                         Pokemons_Pokedex.append(pokemon)
+                                        print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
                                         break
                                     else:
                                         print(f"Oops! Você não conseguiu capturar o {pokemon}.")  
                                         tentativas_extra -= 1
+                                        print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
                                         continue
                                 else:
                                     print(f"você decidiu não tentar novamente")
@@ -167,22 +169,21 @@ while True:
         pokemon_dataMa = random.choice(list(zip(pokemonsMa, pokeimgMa))) 
         pokemon, pokemon_img = pokemon_dataMa
         if random.randint(1, 2) == 1:
-            print(f"você tem {tentativas_extra} tentativas para capturar o pokemon.")
+            print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
             print(f"Você encontrou um {pokemon} no matagal!\n{pokemon_img}") 
             if pokemon in Pokemons_Pokedex :
                 print("Você já tem esse Pokemón.") 
                 continue
             else:
-                while tentativas_extra > 0 and tentativas_extra < 5 and pokemon not in Pokemons_Pokedex: #Se ainda tiver tentativas e okemon não estiver na pokedex
+                while tentativas_extra > 0 and tentativas_extra < 4 and pokemon not in Pokemons_Pokedex: #Se ainda tiver tentativas e okemon não estiver na pokedex
                         capturar = input("Você deseja tentar capturar este Pokémon? (sim/não) ").lower()
                         if capturar == "sim":
                             probabilidade_captura = 0.5 # Probabilidade de captura na caverna
                             if random.random() <= probabilidade_captura:
                                 print(f"Parabéns! Você capturou o {pokemon}!")
                                 Pokemons_Pokedex.append(pokemon)
-                                tentativas_extra -= 1
-                            else:
-                                
+                                print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
+                            else:                                
                                 print(f"Oops! Você não conseguiu capturar o {pokemon} :( .")
                                 tentativas_extra -= 1
                                 tentar_novamente = input("Você deseja tentar capturar novamente? (sim/não)\n").lower()
@@ -190,10 +191,12 @@ while True:
                                     if random.random() <= probabilidade_captura and pokemon not in Pokemons_Pokedex:
                                         print(f"Parabéns! Você conseguiu capturar o {pokemon}! Ele foi adicionado a sua pokedex!")
                                         Pokemons_Pokedex.append(pokemon)
+                                        print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
                                         break
                                     else:
                                         print(f"Oops! Você não conseguiu capturar o {pokemon}.")  
                                         tentativas_extra -= 1
+                                        print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
                                         continue
                                 else:
                                     print(f"você decidiu não tentar novamente")
