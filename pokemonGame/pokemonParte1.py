@@ -154,7 +154,6 @@ while True:
                                     else:
                                         print(f"Oops! Você não conseguiu capturar o {pokemon}.")  
                                         tentativas_extra -= 1
-                                        print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
                                         continue
                                 else:
                                     print(f"você decidiu não tentar novamente")
@@ -196,7 +195,6 @@ while True:
                                     else:
                                         print(f"Oops! Você não conseguiu capturar o {pokemon}.")  
                                         tentativas_extra -= 1
-                                        print(f"você tem {tentativas_extra} tentativas extras para capturar o pokemon.")
                                         continue
                                 else:
                                     print(f"você decidiu não tentar novamente")
